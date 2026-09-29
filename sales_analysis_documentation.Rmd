@@ -1,0 +1,74 @@
+---
+title: "Sales Analysis Script Documentation"
+author: "Liz Villena"
+date: "2026-09-29"
+output: html_document
+---
+
+# AI Assistance Declaration
+
+AI Assistance Declaration: I used ChatGPT (OpenAI GPT-5.6 Sol, September 28, 2026) for Markdown formatting, section organization, and writing assistance.
+
+Prompts used included the seed, refinement, and validation prompts required in the BDA400 Assignment 1 instructions.
+
+I verified the output by manually reviewing the Markdown syntax, running the R code in RStudio, and knitting the final R Markdown document.
+
+All final calculations are done by myself. I am responsible for the accuracy and originality of this work.
+
+---
+
+# Purpose
+
+The purpose of the `sales_analysis.R` script is to demonstrate a simple data analysis workflow using a synthetic sales dataset.
+
+The script creates a synthetic dataset, calculates total sales for each product, displays the completed dataset, and generates summary statistics.
+
+## Inputs
+
+The synthetic dataset contains three initial variables:
+
+- `Product` - Name of the sample product.
+- `Units_Sold` - Number of units sold.
+- `Price` - Sample price of each product.
+
+No external or personal data is used.
+
+## Create the Dataset
+
+The following R code creates the synthetic sales dataset:
+
+```{r create-data}
+sales_data <- data.frame(
+  Product = c("Laptop", "Tablet", "Phone", "Monitor", "Keyboard"),
+  Units_Sold = c(12, 18, 25, 10, 30),
+  Price = c(1200, 600, 900, 350, 80)
+)
+```
+
+## Calculate Total Sales
+
+The following code calculates total sales for each product:
+
+```{r calculate-sales}
+sales_data$Total_Sales <- sales_data$Units_Sold * sales_data$Price
+```
+
+## Outputs
+
+The following code displays the completed dataset:
+
+```{r display-data}
+print(sales_data)
+```
+
+The following code generates summary statistics:
+
+```{r summary-statistics}
+summary(sales_data)
+```
+
+## Conclusion
+
+This script demonstrates a simple R data analysis workflow using synthetic data. It creates a dataset, calculates a new variable, and generates summary statistics.
+
+The R Markdown document clearly explains the purpose, inputs, processing steps, and outputs of the `sales_analysis.R` script.
